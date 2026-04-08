@@ -263,9 +263,12 @@ document.querySelectorAll('.achievements, .hero-stats').forEach(el => counterObs
         const data = await res.json();
         ans = data.answer;
       } else {
+        const errData = await res.json().catch(() => ({}));
+        console.error("Terminal API Failure:", res.status, errData);
         ans = localFallback(q);
       }
-    } catch {
+    } catch (err) {
+      console.error("Terminal Connection Error:", err);
       ans = localFallback(q);
     }
 
@@ -285,21 +288,21 @@ document.querySelectorAll('.achievements, .hero-stats').forEach(el => counterObs
   document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => askSurya(c.dataset.q)));
 })();
 
-// ── LEARNING TICKER ──
+// ── LEARNING TICKER (Unified Banner) ──
 (function() {
   const items = (window.__learningItems && window.__learningItems.length) ? window.__learningItems : ['AWS Solutions Architect Pro'];
   let idx = 0;
-  const el = document.getElementById('learningTicker');
+  const el = document.getElementById('topBannerTicker') || document.getElementById('learningTicker');
   if (!el) return;
-  el.textContent = items[0];
+  // If we have learning items and it's not the top banner text already, start cycling
   setInterval(() => {
     el.classList.add('fade-out');
     setTimeout(() => {
       idx = (idx + 1) % items.length;
-      el.textContent = items[idx];
+      el.textContent = 'Learning: ' + items[idx];
       el.classList.remove('fade-out');
     }, 350);
-  }, 4000);
+  }, 4500);
 })();
 
 // ── MODALS ──

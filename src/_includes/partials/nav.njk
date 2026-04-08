@@ -1,7 +1,11 @@
 {% if config.roleBanner.show %}
-<div class="role-banner" id="roleBanner">
-  <span>{{ config.roleBanner.text }}</span>
-  <button class="role-banner-close" onclick="document.getElementById('roleBanner').style.display='none'" aria-label="Close banner">✕</button>
+<div class="role-banner {% if config.openToRoles %}banner-open{% endif %}" id="roleBanner">
+  {% if config.openToRoles %}
+    <span class="role-banner-content">🚀 Available for Senior Roles · London · Remote</span>
+  {% else %}
+    <span class="role-banner-content" id="topBannerTicker">{{ config.roleBanner.text }}</span>
+  {% endif %}
+  <button class="role-banner-close" onclick="document.getElementById('roleBanner').remove(); document.documentElement.style.setProperty('--banner-h', '0px')" aria-label="Close banner">✕</button>
 </div>
 {% endif %}
 
