@@ -52,11 +52,7 @@ if (themeBtn) {
 (function() {
   const el = document.getElementById('expCounter');
   if (!el) return;
-  const start = new Date('2017-05-01');
-  const now = new Date();
-  const yrs = Math.floor((now - start) / (1000 * 60 * 60 * 24 * 365.25));
-  const months = Math.floor(((now - start) / (1000 * 60 * 60 * 24 * 30.44)) % 12);
-  el.innerHTML = `⏱ <strong>${yrs} years, ${months} months</strong> of professional software engineering experience`;
+  el.innerHTML = `⏱ <strong>8+ years</strong> of professional software engineering experience`;
 })();
 
 // ── TYPING EFFECT ──

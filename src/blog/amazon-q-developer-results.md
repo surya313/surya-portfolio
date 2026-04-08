@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "How Amazon Q Developer Reduced Our Post-Deploy Defects by 30%"
-description: "A practical account of integrating AI-assisted code review into a Java microservices team at Lloyd's of London — what worked, what didn't, and the actual numbers."
+description: "A practical account of integrating AI-assisted code review into a Java microservices team at Lloyd's of London. What worked, what didn't, and the actual numbers."
 date: 2026-02-10
 tags:
   - blog
@@ -16,7 +16,7 @@ After 8 months of daily use at Lloyd's of London, here's my honest assessment.
 
 ## The Context
 
-Our team of 7 engineers maintains a suite of Spring Boot microservices handling insurance policy processing, claims, and financial settlement. The codebase is Java 17, deployed on AWS EKS, with strict SonarQube gates and a 85%+ test coverage requirement.
+Our team of 7 engineers maintains a suite of Spring Boot microservices handling insurance policy processing, claims, and financial settlement. The codebase is Java 21, deployed on AWS EKS, with strict SonarQube gates and a 85%+ test coverage requirement.
 
 Before Q Developer, our most common post-deploy defects were:
 - NullPointerExceptions from unhandled optional fields in API responses
@@ -27,9 +27,9 @@ Before Q Developer, our most common post-deploy defects were:
 
 **1. Null safety suggestions.** Q Developer is remarkably good at spotting places where we're not handling `Optional` properly or where a field could be null at runtime but isn't checked. It flagged dozens of these in our codebase that SonarQube had missed.
 
-**2. Security vulnerability scanning.** It caught a hardcoded secret that had slipped through a PR review. Not a production secret, thankfully — it was in a test config — but it would have ended up in our Git history.
+**2. Security vulnerability scanning.** It caught a hardcoded secret that had slipped through a PR review. Not a production secret, thankfully (it was in a test config), but it would have ended up in our Git history.
 
-**3. AWS API usage patterns.** For our DynamoDB and S3 interactions, Q's suggestions often reflected best practices we hadn't considered — like using batch writes more aggressively or handling `ProvisionedThroughputExceededException` with exponential backoff.
+**3. AWS API usage patterns.** For our DynamoDB and S3 interactions, Q's suggestions often reflected best practices we hadn't considered, like using batch writes more aggressively or handling `ProvisionedThroughputExceededException` with exponential backoff.
 
 ## What It Doesn't Do Well
 
@@ -41,18 +41,39 @@ The lesson: AI-assisted review is a first pass, not a final one. Human domain kn
 
 Before Amazon Q integration into our PR review process, we averaged roughly 4-5 production defects per sprint that traced back to code review gaps.
 
-After establishing Q Developer as a required step in our CI pipeline (it runs on every PR alongside SonarQube), that dropped to 2-3 — a reduction of around **30%**. Not all of that is attributable to Q alone (we also tightened our test coverage requirements in the same period), but the correlation is clear.
+After making Q Developer a consistent part of how engineers work (alongside tightening our test coverage requirements), that dropped to 2-3, a reduction of around **30%**. Not all of that is attributable to Q alone, but the correlation is clear.
 
-## Our Integration Pattern
+## How We Use It in Practice
 
-We run Q Developer in two places:
-1. **IDE-level** (VS Code and IntelliJ plugins) — developers get inline suggestions as they write
-2. **CI pipeline** — a Q security scan runs on every PR and must pass before merge
+Q Developer runs inside IntelliJ as part of our development workflow. The four areas where it earns its place:
 
-The CI integration was the bigger win. It catches things developers miss when they're focused on writing new code, and it creates a consistent quality gate regardless of individual experience levels.
+**1. Code optimisation during development.** As engineers write, Q surfaces suggestions for more idiomatic or efficient implementations, such as better use of Java Streams, cleaner Optional handling, and more appropriate collection types. It's not always right, but it prompts the right questions.
+
+**2. PR review assistance.** Before raising a PR, engineers run Q over their diff. It catches things that are easy to miss when you're close to the code, like unhandled edge cases, missing null checks, and potential performance regressions. It's a first-pass review that raises the quality floor before a human reviewer even looks.
+
+**3. Writing test cases.** Q is particularly useful for generating test scaffolding. Given a method signature and some context, it produces a reasonable set of JUnit test cases covering the happy path and common edge cases. Engineers extend and adapt these rather than starting from blank files.
+
+**4. Identifying edge cases from Jira acceptance criteria.** This one surprised us. Pasting a Jira ticket's acceptance criteria into Q and asking it to identify scenarios we might have missed has become a standard step before writing tests. It looks at the AC from a different angle than the engineer who wrote the code, which is exactly when it's most useful.
+
+## Going Further: Kiro IDE and MCP Servers
+
+Alongside IntelliJ and Q Developer, we've recently adopted **Kiro IDE** with **MCP (Model Context Protocol) server integrations**, and this has been a separate but equally significant productivity shift.
+
+Kiro connects directly to Jira and Confluence via MCP servers, which means a large category of manual overhead that used to fall on engineers is now automated:
+
+- **RCA documentation.** After a production incident, Kiro drafts the root cause analysis from logs, PR history, and service context. Engineers review and approve rather than write from scratch.
+- **Jira updates.** Ticket status, comments, and acceptance criteria updates are handled without leaving the IDE.
+- **Confluence documentation.** New feature documentation and architecture decision records are generated and published to the right Confluence space automatically.
+- **Manifest and config generation.** Kubernetes manifests and AWS infrastructure configs are drafted based on existing patterns in the codebase.
+
+The cumulative time saving is significant. Tasks that previously consumed 30-60 minutes of an engineer's day, scattered across context switches between IDE, browser, Jira, and Confluence, now take minutes. It keeps engineers in flow and reduces the cognitive cost of the process work that surrounds actual development.
+
+Combined with Amazon Q Developer for code quality, the overall toolchain is genuinely changing how the team operates. Not by replacing engineering judgement, but by eliminating the low-value manual work around it.
 
 ## Recommendation
 
-If you're leading a Java backend team, the ROI on Amazon Q Developer is positive, but only if you integrate it into your pipeline rather than leaving it as an optional developer tool. The value comes from consistency, not from any single catch it makes.
+If you're leading a Java backend team, the ROI on Amazon Q Developer is positive, but only if it becomes a consistent part of how engineers actually work. Make it part of the PR checklist: run Q before you raise the PR, not after review comes back. The value comes from the habit, not from any single catch it makes.
 
-And pair it with good domain knowledge. The AI handles the syntax; you handle the semantics.
+Layer in MCP server integrations for your project management and documentation tools and the gains compound further. Less time on process, more time on engineering.
+
+And through all of it: pair AI tooling with good domain knowledge. The AI handles the syntax and the admin; you handle the semantics and the decisions.

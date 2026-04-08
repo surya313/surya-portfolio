@@ -16,13 +16,15 @@ EXPERIENCE
 Senior Java Consultant — DXC Technologies @ Lloyd's of London, UK
 July 2022 — Present
 - Led end-to-end modernisation of legacy insurance systems into event-driven Spring Boot microservices on AWS EKS, heading a team of 7 engineers.
+- Leading ongoing modernisation of legacy insurance systems into event-driven Spring Boot microservices on AWS EKS.
+- Using AWS SNS and SQS for async messaging between decoupled services (policy, claims, underwriting, notifications).
 - Used Amazon Q Developer to refactor legacy code, achieving a 30% reduction in post-deployment defects.
 - Leveraged Kiro IDE with MCP server integrations (Jira, Confluence) to automate RCA documentation and streamline defect triage.
 - Optimised PostgreSQL and DynamoDB queries, reducing API response times by up to 20%.
 - Championed TDD, achieving 85%+ test coverage on core services using JUnit and Mockito.
 - Implemented ELK Stack (Elasticsearch, Logstash, Kibana) for full observability across all services.
 - Built CI/CD pipelines using Jenkins, SonarQube, and Docker on AWS EKS.
-Tech: Java 17, Spring Boot, Apache Kafka, AWS (EKS, EC2, S3, DynamoDB, SNS, SQS, Lambda), PostgreSQL, Elasticsearch, Kibana, Docker, Kubernetes, Jenkins, JUnit, Mockito, Amazon Q Developer, Kiro IDE
+Tech: Java 21, Spring Boot, AWS SNS, AWS SQS, AWS EKS, EC2, S3, DynamoDB, Lambda, PostgreSQL, Elasticsearch, Kibana, Docker, Kubernetes, Jenkins, JUnit, Mockito, Amazon Q Developer, Kiro IDE
 
 Software Engineer — AcolyteSoft (Banking Domain)
 January 2021 — January 2022
