@@ -216,14 +216,14 @@ document.querySelectorAll('.achievements, .hero-stats').forEach(el => counterObs
   const openToRoles = window.__openToRoles !== undefined ? window.__openToRoles : true;
   const fallback = {
     aws: "I have strong hands-on AWS experience — EC2, S3, Lambda, DynamoDB, SNS, SQS, and EKS. At Lloyd's I cut API response times by 20% through DynamoDB query optimisation.",
-    kafka: "I've used Apache Kafka extensively at Lloyd's of London, building async event-driven pipelines for insurance workflows.",
+    kafka: "While I'm familiar with Apache Kafka from past work, my recent heavy event-driven pipelines at Lloyd's of London were built entirely on AWS SNS and SQS for asynchronous messaging.",
     lloyd: "At Lloyd's via DXC I lead the modernisation of legacy insurance systems into Spring Boot microservices on AWS — 7 engineers, 30% fewer defects.",
     open: openToRoles
       ? "Yes — I'm actively open to senior roles in financial services, fintech, or cloud-native engineering. Based in London, open to remote. Reach me at r.suryaprakash31@gmail.com."
       : "I'm not actively looking right now, but feel free to connect on LinkedIn — I'm always open to interesting conversations.",
     ai: "I use Amazon Q Developer daily and Kiro IDE with MCP integrations for Jira/Confluence — significantly reducing manual overhead.",
     skill: "Designing scalable event-driven microservices on AWS with Java and Spring Boot — backed by TDD, SOLID principles, and CI/CD automation.",
-    default: "I'm Surya — Senior Java Engineer, 8+ years in banking & insurance. Java, Spring Boot, AWS, Kafka. Currently at Lloyd's of London. What would you like to know?"
+    default: "I'm Surya — Senior Java Engineer, 8+ years in banking & insurance. Expert in Java, Spring Boot, and AWS. Currently at Lloyd's of London. What would you like to know?"
   };
 
   function localFallback(q) {

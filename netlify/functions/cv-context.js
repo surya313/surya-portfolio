@@ -9,7 +9,7 @@ LinkedIn: linkedin.com/in/surya-prakash-reddy-reddygari-3a6635140
 GitHub: github.com/surya313
 
 SUMMARY
-Senior Java Software Engineer with 8+ years of experience building production-grade financial systems in banking and insurance. Currently leading a team of 7 engineers at Lloyd's of London (via DXC Technologies), delivering a large-scale modernisation of legacy insurance platforms into event-driven microservices on AWS. Deep expertise in Java, Spring Boot, Apache Kafka, and cloud-native AWS infrastructure. Passionate about clean architecture, TDD, and AI-assisted development tooling.
+Senior Java Software Engineer with 8+ years of experience building production-grade financial systems in banking and insurance. Currently leading a team of 7 engineers at Lloyd's of London (via DXC Technologies), delivering a large-scale modernisation of legacy insurance platforms into event-driven microservices on AWS. Deep expertise in Java, Spring Boot, event-driven architectures, and cloud-native AWS infrastructure (SNS/SQS). Passionate about clean architecture, TDD, and AI-assisted development tooling.
 
 EXPERIENCE
 
