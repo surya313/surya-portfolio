@@ -1,0 +1,56 @@
+---
+layout: base.njk
+---
+
+<div class="post-page">
+
+  <!-- Breadcrumb -->
+  <div class="post-breadcrumb" role="navigation" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="bc-sep">/</span>
+    <a href="/blog/">Blog</a>
+    <span class="bc-sep">/</span>
+    <span class="bc-current">{{ title }}</span>
+  </div>
+
+  <article class="post-article">
+    <header class="post-header">
+      <div class="post-meta-row">
+        <time class="post-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+        <span class="post-reading-time">{{ content | readingTime }}</span>
+      </div>
+      <h1 class="post-title">{{ title }}</h1>
+      {% if description %}
+        <p class="post-subtitle">{{ description }}</p>
+      {% endif %}
+      {% if tags %}
+        <div class="post-tags">
+          {% for tag in tags %}
+            {% if tag != "blog" %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+
+    <footer class="post-footer">
+      <div class="post-author-card">
+        <div class="post-author-avatar">SP</div>
+        <div class="post-author-info">
+          <div class="post-author-name">Surya Prakash Reddy</div>
+          <div class="post-author-role">Senior Java Engineer · Lloyd's of London</div>
+        </div>
+      </div>
+      <div class="post-footer-links">
+        <a href="/blog/" class="btn-outline">← All posts</a>
+        <a href="https://www.linkedin.com/in/surya-prakash-reddy-reddygari-3a6635140/" target="_blank" rel="noopener" class="btn-outline">Follow on LinkedIn</a>
+      </div>
+    </footer>
+  </article>
+
+</div>

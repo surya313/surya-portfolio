@@ -1,0 +1,44 @@
+---
+layout: base.njk
+title: "Blog — Engineering Insights | Surya Prakash Reddy"
+description: "Thoughts on Java, microservices, cloud architecture, and engineering leadership from 8+ years in financial services."
+permalink: /blog/
+---
+
+<div class="blog-listing-page">
+  <div class="blog-listing-hero">
+    <div class="section-label">Writing</div>
+    <h1 class="section-title">The Blog</h1>
+    <p class="blog-listing-sub">
+      Thoughts on Java, microservices, AWS, and building software in financial services.<br>
+      Lessons from 8+ years shipping production code at Lloyd's of London and beyond.
+    </p>
+  </div>
+
+  <div class="blog-listing-grid">
+    {% for post in collections.blog %}
+    <a href="{{ post.url }}" class="blog-card reveal">
+      <div class="blog-card-meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <span class="blog-card-reading">{{ post.content | readingTime }}</span>
+      </div>
+      <h2 class="blog-card-title">{{ post.data.title }}</h2>
+      {% if post.data.description %}
+        <p class="blog-card-excerpt">{{ post.data.description }}</p>
+      {% endif %}
+      {% if post.data.tags %}
+        <div class="blog-card-tags">
+          {% for tag in post.data.tags %}
+            {% if tag != "blog" %}
+              <span class="blog-card-tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      <span class="blog-card-cta">Read article →</span>
+    </a>
+    {% else %}
+    <p class="blog-empty">No posts yet — check back soon.</p>
+    {% endfor %}
+  </div>
+</div>

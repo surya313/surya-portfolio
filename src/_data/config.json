@@ -1,0 +1,28 @@
+{
+  "openToRoles": false,
+  "roleBanner": {
+    "show": true,
+    "text": "Currently: Senior Java Consultant @ Lloyd's of London · DXC Technologies"
+  },
+  "heroRoles": [
+    "Senior Java Engineer",
+    "AWS Microservices Architect",
+    "Team Lead · 7 Engineers",
+    "Event-Driven Systems Expert",
+    "AI-Assisted Dev Advocate"
+  ],
+  "heroTags": [
+    {
+      "label": "Permanent Positions",
+      "color": "blue"
+    },
+    {
+      "label": "Fintech / Insurance",
+      "color": "amber"
+    },
+    {
+      "label": "Team Lead Roles",
+      "color": "purple"
+    }
+  ]
+}

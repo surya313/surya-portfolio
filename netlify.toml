@@ -1,0 +1,14 @@
+[build]
+  command = "npx @11ty/eleventy"
+  publish = "_site"
+
+[functions]
+  directory = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/blog"
+  to   = "/blog/"
+  status = 301

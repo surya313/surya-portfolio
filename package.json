@@ -1,0 +1,17 @@
+{
+  "name": "surya-portfolio",
+  "version": "1.0.0",
+  "description": "Surya Prakash Reddy — Senior Java Engineer Portfolio",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "luxon": "^3.5.0"
+  }
+}

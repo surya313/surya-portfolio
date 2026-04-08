@@ -1,0 +1,358 @@
+---
+layout: base.njk
+title: "Surya Prakash Reddy — Senior Java Engineer | London"
+description: "Senior Java Software Engineer with 8+ years in banking & insurance. Expert in Java, Spring Boot, AWS, Kafka, Kubernetes. Based in London, open to new opportunities."
+permalink: /
+---
+
+<!-- SIDE NAV DOTS -->
+<div class="side-nav" id="sideNav">
+  <div class="snav-dot" data-section="hero" data-label="Top"></div>
+  <div class="snav-dot" data-section="skills" data-label="Skills"></div>
+  <div class="snav-dot" data-section="experience" data-label="Experience"></div>
+  <div class="snav-dot" data-section="projects" data-label="Projects"></div>
+  <div class="snav-dot" data-section="terminal-section" data-label="Ask Surya"></div>
+  <div class="snav-dot" data-section="contact" data-label="Contact"></div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <canvas id="starCanvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    {% if config.openToRoles %}<div class="hero-tag">Available for Senior Roles · London · Remote</div>{% endif %}
+    <h1 class="hero-name">Surya<br>Prakash Reddy</h1>
+    <div class="hero-typing-wrap">
+      <span id="typingText"></span><span class="hero-typing-cursor"></span>
+    </div>
+    <div class="exp-counter" id="expCounter">⏱ <strong>8+ years</strong> of professional software engineering experience</div>
+    <div class="open-to-wrap">
+      {% for tag in config.heroTags %}
+      <span class="open-to-tag active" data-color="{{ tag.color }}">✓ {{ tag.label }}</span>
+      {% endfor %}
+    </div>
+    <p class="hero-desc">Senior Java Engineer with 8+ years building production-grade financial systems at Lloyd's of London. Specialist in microservices, event-driven architecture, and cloud-native AWS platforms. Currently leading a team of 7 engineers.</p>
+    <div class="hero-ctas">
+      <a href="/public/Surya_CV.pdf" class="btn-primary" id="downloadCvBtn" download>⬇ Download CV</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-box"><div class="stat-num counter-num" data-target="8" data-suffix="+">0</div><div class="stat-label">Years<br>Experience</div></div>
+      <div class="stat-box"><div class="stat-num counter-num" data-target="30" data-suffix="%">0</div><div class="stat-label">Defect<br>Reduction</div></div>
+      <div class="stat-box"><div class="stat-num counter-num" data-target="85" data-suffix="%+">0</div><div class="stat-label">Test<br>Coverage</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CURRENTLY LEARNING -->
+<div class="learning-strip">
+  <div class="learning-strip-inner">
+    <div class="learning-strip-left">
+      <span class="learning-live-dot"></span>
+      <span class="learning-label">Currently learning</span>
+    </div>
+    <div class="learning-strip-right">
+      <span class="learning-item" id="learningTicker"></span>
+    </div>
+  </div>
+</div>
+<script>window.__learningItems = {{ learning | dump | safe }};window.__heroRoles = {{ config.heroRoles | dump | safe }};window.__openToRoles = {{ config.openToRoles | dump | safe }};</script>
+
+<!-- WAVE -->
+<div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--surface)"/></svg></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">What I bring</div>
+  <h2 class="section-title">Technical Expertise</h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">☕</div><div class="skill-category">Core</div>
+      <div class="skill-title">Backend Engineering</div>
+      <p class="skill-desc">8+ years building production Java systems in banking and insurance.</p>
+      <div class="tech-icons"><span class="tech-icon">Java 8–21</span><span class="tech-icon">Spring Boot</span><span class="tech-icon">Spring Security</span><span class="tech-icon">Hibernate</span><span class="tech-icon">JUnit</span><span class="tech-icon">Mockito</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">☁️</div><div class="skill-category">Cloud & DevOps</div>
+      <div class="skill-title">AWS & Containers</div>
+      <p class="skill-desc">Designing and running microservices on AWS EKS with full CI/CD pipelines.</p>
+      <div class="tech-icons"><span class="tech-icon">AWS EC2</span><span class="tech-icon">S3</span><span class="tech-icon">Lambda</span><span class="tech-icon">EKS</span><span class="tech-icon">Docker</span><span class="tech-icon">Kubernetes</span><span class="tech-icon">Jenkins</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🗄️</div><div class="skill-category">Data</div>
+      <div class="skill-title">Databases & Search</div>
+      <p class="skill-desc">Relational and NoSQL at scale, with Elasticsearch for full observability.</p>
+      <div class="tech-icons"><span class="tech-icon">PostgreSQL</span><span class="tech-icon">DynamoDB</span><span class="tech-icon">MongoDB</span><span class="tech-icon">Elasticsearch</span><span class="tech-icon">Kibana</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">⚡</div><div class="skill-category">Messaging</div>
+      <div class="skill-title">Event-Driven Systems</div>
+      <p class="skill-desc">Async, decoupled architectures using Kafka and AWS messaging at Lloyd's.</p>
+      <div class="tech-icons"><span class="tech-icon">Apache Kafka</span><span class="tech-icon">RabbitMQ</span><span class="tech-icon">AWS SNS</span><span class="tech-icon">SQS</span><span class="tech-icon">REST APIs</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🤖</div><div class="skill-category">AI-Assisted Dev</div>
+      <div class="skill-title">LLM Tooling</div>
+      <p class="skill-desc">Using AI tools in daily engineering work to ship faster and with fewer defects.</p>
+      <div class="tech-icons"><span class="tech-icon">Amazon Q</span><span class="tech-icon">Kiro IDE</span><span class="tech-icon">MCP Servers</span><span class="tech-icon">Jira / Confluence</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">⚛️</div><div class="skill-category">Frontend</div>
+      <div class="skill-title">UI Development</div>
+      <p class="skill-desc">Full-stack capability — built banking portal UIs with React and Redux.</p>
+      <div class="tech-icons"><span class="tech-icon">React.js</span><span class="tech-icon">Redux</span><span class="tech-icon">JavaScript</span><span class="tech-icon">TypeScript</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" style="transform:rotate(180deg)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--surface)"/></svg></div>
+
+<!-- CAREER TIMELINE -->
+<div class="career-timeline-section">
+  <div class="career-timeline-inner">
+    <div class="section-label">Full journey</div>
+    <h2 class="section-title" style="margin-bottom:1.5rem">Career Timeline</h2>
+    <div class="career-track">
+      <div class="career-node above" style="left:10%"><div class="career-node-dot"></div><div class="career-node-label"><div class="career-node-year">2017</div><div class="career-node-role">COBOL Developer</div><div class="career-node-company">CapeFox Technologies</div></div></div>
+      <div class="career-node below" style="left:27.5%"><div class="career-node-dot"></div><div class="career-node-label"><div class="career-node-year">2018</div><div class="career-node-role">Java Developer</div><div class="career-node-company">C-EDGE Technologies</div></div></div>
+      <div class="career-node above" style="left:45%"><div class="career-node-dot"></div><div class="career-node-label"><div class="career-node-year">2020</div><div class="career-node-role">MSc Software Engineering</div><div class="career-node-company">Univ. of Leicester</div></div></div>
+      <div class="career-node below" style="left:62.5%"><div class="career-node-dot"></div><div class="career-node-label"><div class="career-node-year">2021</div><div class="career-node-role">Software Engineer</div><div class="career-node-company">AcolyteSoft</div></div></div>
+      <div class="career-node above" style="left:80%"><div class="career-node-dot" style="background:var(--accent2);box-shadow:0 0 0 3px rgba(96,170,255,0.3)"></div><div class="career-node-label"><div class="career-node-year">2022 — Now</div><div class="career-node-role">Senior Java Engineer</div><div class="career-node-company">DXC @ Lloyd's of London</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Career journey</div>
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="exp-timeline">
+    <div class="exp-timeline-line" id="timelineLine"></div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-period">July 2022 — Present</div>
+      <div class="exp-role">Senior Java Engineer</div>
+      <div class="exp-company">DXC Technologies · Lloyd's of London, UK</div>
+      <div class="exp-highlights">
+        <div class="exp-highlight">Led end-to-end modernisation of legacy insurance systems into scalable, event-driven Spring Boot microservices on AWS, heading a team of 7 engineers.</div>
+        <div class="exp-highlight">Used Amazon Q Developer to refactor legacy code, achieving a 30% reduction in post-deployment defects.</div>
+        <div class="exp-highlight">Leveraged Kiro IDE with MCP server integrations (Jira, Confluence) to automate RCA documentation and streamline defect triage.</div>
+        <div class="exp-highlight">Optimised PostgreSQL and DynamoDB queries, reducing API response times by up to 20%.</div>
+        <div class="exp-highlight">Championed TDD, achieving 85%+ test coverage on core services using JUnit and Mockito.</div>
+      </div>
+      <div class="exp-badges"><span class="badge">Spring Boot</span><span class="badge">AWS</span><span class="badge">Kubernetes</span><span class="badge">Kafka</span><span class="badge">PostgreSQL</span><span class="badge">ELK Stack</span></div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-period">Jan 2021 — Jan 2022</div>
+      <div class="exp-role">Software Engineer</div>
+      <div class="exp-company">AcolyteSoft · Banking Domain</div>
+      <div class="exp-highlights">
+        <div class="exp-highlight">Built RESTful APIs for banking features using Java, Spring Boot, and microservices architecture.</div>
+        <div class="exp-highlight">Developed modern UI with React, React Hooks, and Redux for a banking application.</div>
+        <div class="exp-highlight">Integrated AWS SNS and SQS into account creation pipeline for real-time status notifications.</div>
+      </div>
+      <div class="exp-badges"><span class="badge">Java</span><span class="badge">React</span><span class="badge">Redux</span><span class="badge">AWS SNS/SQS</span></div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-period">July 2018 — Jan 2020</div>
+      <div class="exp-role">Java Software Developer</div>
+      <div class="exp-company">C-EDGE Technologies · Banking Domain</div>
+      <div class="exp-highlights">
+        <div class="exp-highlight">Developed the deposit module covering deposit processing and interest calculations.</div>
+        <div class="exp-highlight">Designed DTOs that reduced over-fetching of data by 30%, improving application performance.</div>
+      </div>
+      <div class="exp-badges"><span class="badge">Java</span><span class="badge">Spring Boot</span><span class="badge">AOP</span><span class="badge">DTOs</span></div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-period">May 2017 — July 2018</div>
+      <div class="exp-role">COBOL Developer</div>
+      <div class="exp-company">CapeFox Technologies · BANCS@24</div>
+      <div class="exp-highlights">
+        <div class="exp-highlight">Ensured BANCS@24 compliance with RBI standards through COBOL program changes.</div>
+        <div class="exp-highlight">Utilised AutoSys to schedule and monitor EOD and EOY batch jobs.</div>
+      </div>
+      <div class="exp-badges"><span class="badge">COBOL</span><span class="badge">AutoSys</span><span class="badge">RBI Compliance</span></div>
+    </div>
+  </div>
+  <div class="achievements reveal">
+    <div class="achieve-card"><div class="achieve-num counter-num" data-target="8" data-suffix="+">0</div><div class="achieve-desc">Years of<br>experience</div></div>
+    <div class="achieve-card"><div class="achieve-num counter-num" data-target="30" data-suffix="%">0</div><div class="achieve-desc">Post-deploy<br>defect reduction</div></div>
+    <div class="achieve-card"><div class="achieve-num counter-num" data-target="20" data-suffix="%">0</div><div class="achieve-desc">Faster API<br>response times</div></div>
+    <div class="achieve-card"><div class="achieve-num counter-num" data-target="85" data-suffix="%+">0</div><div class="achieve-desc">Test coverage<br>on core services</div></div>
+    <div class="achieve-card"><div class="achieve-num counter-num" data-target="7" data-suffix="">0</div><div class="achieve-desc">Engineers<br>led & mentored</div></div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider" style="transform:rotate(180deg)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,0 1080,60 1440,30 L1440,60 L0,60 Z" fill="var(--bg)"/></svg></div>
+
+<!-- PROJECTS -->
+<section id="projects" style="background:var(--surface)">
+  <div class="section-label">Key work</div>
+  <h2 class="section-title">Project Showcase</h2>
+  <div class="projects-grid">
+    {% for project in collections.projects %}
+    <a href="{{ project.url }}" class="project-card reveal">
+      <div class="project-tag">{{ project.data.tag }}</div>
+      <div class="project-title">{{ project.data.title }}</div>
+      <div class="project-desc">{{ project.templateContent | striptags | truncate(160) }}</div>
+      <div class="project-stack">{% for tech in project.data.stack %}<span class="tech-icon">{{ tech }}</span>{% endfor %}</div>
+      <div class="project-impact">📈 {{ project.data.impact }}</div>
+      <div class="project-expand">View case study →</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-divider"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--bg)"/></svg></div>
+
+<!-- RECOMMENDATIONS -->
+<div class="recs-section" id="recommendations">
+  <div class="recs-inner">
+    <div class="section-label">LinkedIn Recommendations</div>
+    <h2 class="section-title">What Colleagues Say</h2>
+    <div class="recs-grid">
+      {% for rec in recommendations %}
+      <div class="rec-card reveal">
+        <div class="rec-meta">
+          <div class="rec-name">{{ rec.name }}</div>
+          <div class="rec-role">{{ rec.role }} · {{ rec.company }}</div>
+          <div class="rec-date">{{ rec.date }} · {{ rec.context }}</div>
+        </div>
+        <div class="rec-text">{{ rec.text }}</div>
+        <button class="rec-read-more" onclick="this.previousElementSibling.classList.toggle('expanded');this.textContent=this.previousElementSibling.classList.contains('expanded')?'Show less ↑':'Read more ↓'">Read more ↓</button>
+        <div class="rec-author"><strong>{{ rec.name }}</strong> · {{ rec.company }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-label">Academic Background</div>
+  <h2 class="section-title">Education & Qualifications</h2>
+  <div class="exp-timeline edu-timeline" style="padding-left:2rem">
+    <div class="exp-item reveal"><div class="exp-dot"></div><div class="exp-period">Jan 2020 — May 2022</div><div class="exp-role" style="font-size:1.1rem">M.S. Advanced Software Engineering</div><div class="exp-company" style="margin-bottom:0">University of Leicester, Leicester, UK</div></div>
+    <div class="exp-item reveal"><div class="exp-dot"></div><div class="exp-period">May 2014 — Apr 2017</div><div class="exp-role" style="font-size:1.1rem">B.Tech. Electronics & Communication Engineering</div><div class="exp-company" style="margin-bottom:0">Jawaharlal Nehru Technological University, Hyderabad, India</div></div>
+    <div class="exp-item reveal" style="border-bottom:none"><div class="exp-dot"></div><div class="exp-period">2011 — 2014</div><div class="exp-role" style="font-size:1.1rem">Diploma in Electronics & Communication Engineering</div><div class="exp-company" style="margin-bottom:0">State Board of Technical Education and Training, India</div></div>
+  </div>
+</section>
+
+<!-- HOBBIES -->
+<div class="hobbies-strip">
+  <div class="hobbies-inner">
+    <div class="section-label">Beyond the code</div>
+    <h2 class="section-title" style="margin-bottom:0.5rem;font-size:clamp(1.4rem,2.5vw,2rem)">Interests & Hobbies</h2>
+    <div class="hobbies-chips">
+      <span class="hobby-chip"><span class="hobby-chip-icon">🍳</span>Cooking</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🏏</span>Cricket</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">✈️</span>Travelling</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">📚</span>Tech Blogs</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🎮</span>Gaming</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🎵</span>Music</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🤝</span>Hosting Friends</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🍽️</span>Dining Out</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🏋️</span>Fitness</span>
+      <span class="hobby-chip"><span class="hobby-chip-icon">🎬</span>Films</span>
+    </div>
+  </div>
+</div>
+
+<!-- AI TERMINAL -->
+<div class="terminal-section" id="terminal-section">
+  <div class="terminal-label">Demo Mode · First-person responses</div>
+  <h2 class="terminal-heading">Ask <em>Me</em> Anything</h2>
+  <p class="terminal-subtext">I'm Surya. Ask me about my experience, tech stack, or what I'm looking for next.</p>
+  <div class="terminal-wrapper">
+    <canvas id="terminalCanvas" aria-hidden="true"></canvas>
+    <div class="terminal-box">
+      <div class="terminal-topbar"><span class="t-dot" style="background:#ff5f57"></span><span class="t-dot" style="background:#febc2e"></span><span class="t-dot" style="background:#28c840"></span><span class="t-title">surya@portfolio ~ ask me anything</span></div>
+      <div class="terminal-output" id="terminalOutput"><div class="t-line t-welcome"><span class="t-prompt">sys</span><span class="t-text">Hi! I'm Surya. Ask me about my experience, tech stack, or availability — I'll reply directly.</span></div></div>
+      <div class="terminal-input-row"><span class="t-prompt-input">you@visitor:~$</span><input type="text" id="terminalInput" class="t-input" placeholder="e.g. What's your experience with Kafka?" autocomplete="off" spellcheck="false" aria-label="Ask Surya a question" maxlength="300"><button class="t-send" id="tSend" aria-label="Send">↵</button></div>
+    </div>
+    <div class="terminal-chips"><button class="chip" data-q="What is your experience with AWS?">AWS</button><button class="chip" data-q="Tell me about Lloyd's of London">Lloyd's</button><button class="chip" data-q="Are you open to new opportunities?">Open to work?</button><button class="chip" data-q="What AI tools do you use?">AI tools</button><button class="chip" data-q="What is your strongest skill?">Top skill</button></div>
+  </div>
+</div>
+
+<!-- LATEST BLOG POSTS (pulled automatically from /blog collection) -->
+<section class="latest-posts-section">
+  <div class="section-label">From the blog</div>
+  <h2 class="section-title">Latest Writing</h2>
+  <div class="blog-listing-grid blog-listing-grid--home">
+    {% for post in collections.blog | limit(3) %}
+    <a href="{{ post.url }}" class="blog-card reveal">
+      <div class="blog-card-meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <span class="blog-card-reading">{{ post.content | readingTime }}</span>
+      </div>
+      <h3 class="blog-card-title">{{ post.data.title }}</h3>
+      {% if post.data.description %}
+        <p class="blog-card-excerpt">{{ post.data.description }}</p>
+      {% endif %}
+      <span class="blog-card-cta">Read →</span>
+    </a>
+    {% endfor %}
+  </div>
+  <div style="text-align:center;margin-top:2.5rem">
+    <a href="/blog/" class="btn-outline">All posts →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="section-label">Let's connect</div>
+  <h2 class="section-title">Get in Touch</h2>
+  <p style="color:var(--muted);max-width:500px;margin:0 auto 1.5rem;font-size:0.95rem">Open to senior engineering roles in financial services, fintech, or cloud-native backend engineering.</p>
+  <div class="social-links" style="margin-top:1.5rem">
+    <a href="mailto:r.suryaprakash31@gmail.com" class="social-link">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Email me
+    </a>
+    <a href="https://www.linkedin.com/in/surya-prakash-reddy-reddygari-3a6635140/" target="_blank" rel="noopener" class="social-link">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/surya313" target="_blank" rel="noopener" class="social-link">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      GitHub
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">SPR</a>
+      <p class="footer-tagline">Senior Java Engineer · AWS · Microservices<br>8+ years in banking &amp; insurance · London</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/#skills">Skills</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#recommendations">Recommendations</a>
+      <a href="/#education">Education</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Reddygari Surya Prakash Reddy · London, UK</span>
+    <span id="visitorCount">👁 ...</span>
+  </div>
+</footer>
+
+<!-- Calendly floating button -->
+<a id="calendlyBtn" href="https://calendly.com/r-suryaprakash31/30-minute-meeting" target="_blank" rel="noopener">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM7 12h5v5H7z"/></svg>
+  Book a call
+</a>

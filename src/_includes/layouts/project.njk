@@ -1,0 +1,53 @@
+---
+layout: base.njk
+---
+
+<div class="post-page">
+
+  <div class="post-breadcrumb" role="navigation" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="bc-sep">/</span>
+    <a href="/#projects">Projects</a>
+    <span class="bc-sep">/</span>
+    <span class="bc-current">{{ title }}</span>
+  </div>
+
+  <article class="post-article">
+    <header class="post-header">
+      <div class="post-meta-row">
+        <span class="project-page-tag">{{ tag }}</span>
+        <span class="post-reading-time">{{ period }}</span>
+      </div>
+      <h1 class="post-title">{{ title }}</h1>
+      {% if stack %}
+        <div class="post-tags">
+          {% for tech in stack %}
+            <span class="post-tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if impact %}
+        <p class="project-page-impact">📈 {{ impact }}</p>
+      {% endif %}
+    </header>
+
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+
+    <footer class="post-footer">
+      <div class="post-author-card">
+        <div class="post-author-avatar">SP</div>
+        <div class="post-author-info">
+          <div class="post-author-name">Surya Prakash Reddy</div>
+          <div class="post-author-role">Senior Java Engineer · Lloyd's of London</div>
+        </div>
+      </div>
+      <div class="post-footer-links">
+        <a href="/#projects" class="btn-outline">← All projects</a>
+        <a href="https://www.linkedin.com/in/surya-prakash-reddy-reddygari-3a6635140/" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+      </div>
+    </footer>
+  </article>
+
+</div>

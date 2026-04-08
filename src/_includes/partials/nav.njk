@@ -1,0 +1,38 @@
+{% if config.roleBanner.show %}
+<div class="role-banner" id="roleBanner">
+  <span>{{ config.roleBanner.text }}</span>
+  <button class="role-banner-close" onclick="document.getElementById('roleBanner').style.display='none'" aria-label="Close banner">✕</button>
+</div>
+{% endif %}
+
+<nav>
+  <a href="/" class="nav-logo" id="navLogo">SPR</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#skills">Skills</a></li>
+    <li><a href="/#experience">Experience</a></li>
+    <li><a href="/#projects">Projects</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    {% if config.openToRoles %}<span class="avail-badge"><span class="avail-dot"></span>Open to Roles</span>{% endif %}
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="toggleMobileNav()"></div>
+<div class="mobile-nav-drawer" id="mobileNavDrawer">
+  <ul>
+    <li><a href="/#skills" onclick="toggleMobileNav()">Skills</a></li>
+    <li><a href="/#experience" onclick="toggleMobileNav()">Experience</a></li>
+    <li><a href="/#projects" onclick="toggleMobileNav()">Projects</a></li>
+    <li><a href="/#recommendations" onclick="toggleMobileNav()">Recommendations</a></li>
+    <li><a href="/#education" onclick="toggleMobileNav()">Education</a></li>
+    <li><a href="/blog/" onclick="toggleMobileNav()">Blog</a></li>
+    <li><a href="/#contact" onclick="toggleMobileNav()">Contact</a></li>
+  </ul>
+</div>

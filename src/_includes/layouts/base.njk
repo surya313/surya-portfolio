@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title if title else "Surya Prakash Reddy — Senior Java Engineer | London" }}</title>
+
+<meta name="description" content="{{ description if description else 'Surya Prakash Reddy — Senior Java Software Engineer with 8+ years in banking & insurance. Expert in Java, Spring Boot, AWS, Kafka, Kubernetes. Based in London, open to new opportunities.' }}">
+<meta name="keywords" content="Java Engineer, Spring Boot, AWS, Microservices, Kafka, Kubernetes, London, Backend Developer, Lloyd's of London">
+<meta name="author" content="Reddygari Surya Prakash Reddy">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title if title else 'Surya Prakash Reddy — Senior Java Engineer' }}">
+<meta property="og:description" content="{{ description if description else '8+ years in banking & insurance. Java, Spring Boot, AWS, Kafka, Kubernetes. Based in London, open to new opportunities.' }}">
+<meta property="og:url" content="https://suryaprakashreddy.dev{{ page.url }}">
+<meta property="og:locale" content="en_GB">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title if title else 'Surya Prakash Reddy — Senior Java Engineer' }}">
+<meta name="twitter:description" content="{{ description if description else '8+ years in banking & insurance. Java, Spring Boot, AWS, Kafka. Based in London, open to new roles.' }}">
+<meta name="twitter:image" content="https://suryaprakashreddy.dev/og-image.jpg">
+
+<meta property="og:image" content="https://suryaprakashreddy.dev/og-image.jpg">
+
+<link rel="canonical" href="https://suryaprakashreddy.dev{{ page.url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Surya Prakash Reddy Reddygari",
+  "jobTitle": "Senior Java Engineer",
+  "url": "https://suryaprakashreddy.dev",
+  "email": "r.suryaprakash31@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+  "sameAs": [
+    "https://www.linkedin.com/in/surya-prakash-reddy-reddygari-3a6635140/",
+    "https://github.com/surya313"
+  ],
+  "knowsAbout": ["Java", "Spring Boot", "AWS", "Kafka", "Kubernetes", "Microservices"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="scrollBar"></div>
+<div id="spotlight"></div>
+
+{% include "partials/nav.njk" %}
+
+{{ content | safe }}
+
+<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
