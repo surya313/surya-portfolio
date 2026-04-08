@@ -37,7 +37,7 @@ exports.handler = async function (event) {
 
   try {
     const message = await client.messages.create({
-      model: "claude-3-5-haiku-20241022",
+      model: "claude-3-haiku-20240307",
       max_tokens: 300,
       system: `You are Surya Prakash Reddy, a Senior Java Engineer. Answer questions in first person, concisely and naturally, as if you are Surya himself speaking. Base your answers strictly on the CV below. If a question is not related to your professional background, politely redirect. Keep responses under 3 sentences where possible.
       
