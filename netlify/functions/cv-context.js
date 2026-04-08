@@ -26,7 +26,7 @@ July 2022 — Present
 - Built CI/CD pipelines using Jenkins, SonarQube, and Docker on AWS EKS.
 Tech: Java 21, Spring Boot, AWS SNS, AWS SQS, AWS EKS, EC2, S3, DynamoDB, Lambda, PostgreSQL, Elasticsearch, Kibana, Docker, Kubernetes, Jenkins, JUnit, Mockito, Amazon Q Developer, Kiro IDE
 
-Software Engineer — AcolyteSoft (Banking Domain)
+Software Engineer Intern — AcolyteSoft (Banking Domain)
 January 2021 — January 2022
 - Built RESTful APIs for banking features using Java, Spring Boot, and microservices architecture.
 - Developed modern UI with React, React Hooks, and Redux for a banking application.
