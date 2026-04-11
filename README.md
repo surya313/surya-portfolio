@@ -26,7 +26,7 @@ surya-portfolio/
     │
     ├── blog/
     │   ├── index.njk                     ← /blog/ listing page (auto-generated)
-    │   ├── event-driven-patterns-lloyds.md
+    │   ├── event-driven-patterns-london-market.md
     │   ├── amazon-q-developer-results.md
     │   └── team-lead-lessons.md
     │

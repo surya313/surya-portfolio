@@ -9,11 +9,11 @@ LinkedIn: linkedin.com/in/surya-prakash-reddy-reddygari-3a6635140
 GitHub: github.com/surya313
 
 SUMMARY
-Senior Java Software Engineer with 8+ years of experience building production-grade financial systems in banking and insurance. Currently leading a team of 7 engineers at Lloyd's of London (via DXC Technologies), delivering a large-scale modernisation of legacy insurance platforms into event-driven microservices on AWS. Deep expertise in Java, Spring Boot, event-driven architectures, and cloud-native AWS infrastructure (SNS/SQS). Passionate about clean architecture, TDD, and AI-assisted development tooling.
+Senior Java Software Engineer with 8+ years of experience building production-grade financial systems in banking and insurance. Currently leading a team of 7 engineers at London Market (via DXC Technologies), delivering a large-scale modernisation of legacy insurance platforms into event-driven microservices on AWS. Deep expertise in Java, Spring Boot, event-driven architectures, and cloud-native AWS infrastructure (SNS/SQS). Passionate about clean architecture, TDD, and AI-assisted development tooling.
 
 EXPERIENCE
 
-Senior Java Consultant — DXC Technologies @ Lloyd's of London, UK
+Senior Java Consultant — DXC Technologies @ London Market, UK
 July 2022 — Present
 - Led end-to-end modernisation of legacy insurance systems into event-driven Spring Boot microservices on AWS EKS, heading a team of 7 engineers.
 - Leading ongoing modernisation of legacy insurance systems into event-driven Spring Boot microservices on AWS EKS.
@@ -62,7 +62,7 @@ AI Tools: Amazon Q Developer, Kiro IDE, MCP Servers
 Other: Microservices, Event-Driven Architecture, SOLID, REST, AOP, ELK Stack, Jira, Confluence
 
 ACHIEVEMENTS
-- 30% reduction in post-deployment defects at Lloyd's of London
+- 30% reduction in post-deployment defects at London Market
 - 20% faster API response times through query optimisation
 - 85%+ test coverage on core insurance services
 - Led and mentored a team of 7 engineers

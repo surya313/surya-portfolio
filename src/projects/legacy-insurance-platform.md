@@ -1,6 +1,6 @@
 ---
 title: "Legacy Insurance Platform Modernisation"
-tag: "Insurance · Lloyd's of London"
+tag: "Insurance · London Market"
 period: "2022 — Present"
 stack: ["Java 21", "Spring Boot", "AWS SNS", "AWS SQS", "AWS EKS", "PostgreSQL", "ELK Stack"]
 impact: "30% fewer defects · 20% faster APIs"
@@ -9,7 +9,7 @@ order: 1
 
 ## The Problem
 
-Lloyd's operated critical insurance systems built on legacy monolithic architecture. They were brittle, expensive to maintain, and unable to scale with growing underwriting volumes. The ongoing mission is to progressively modernise these systems into a cloud-native, event-driven microservices architecture on AWS.
+London Market operated critical insurance systems built on legacy monolithic architecture. They were brittle, expensive to maintain, and unable to scale with growing underwriting volumes. The ongoing mission is to progressively modernise these systems into a cloud-native, event-driven microservices architecture on AWS.
 
 ## Architecture
 

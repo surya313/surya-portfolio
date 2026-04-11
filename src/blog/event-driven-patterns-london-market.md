@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: "Event-Driven Architecture Patterns I Use at Lloyd's of London"
+title: "Event-Driven Architecture Patterns I Use at London Market"
 description: "A practical look at SNS/SQS-based event sourcing, dead letter queues, and saga patterns in a regulated insurance environment."
 date: 2026-03-15
 tags:
@@ -10,13 +10,13 @@ tags:
   - java
 ---
 
-After 3+ years designing event-driven systems for Lloyd's of London, I've built up a clear set of patterns that actually work under the pressure of a regulated, mission-critical insurance environment.
+After 3+ years designing event-driven systems for London Market, I've built up a clear set of patterns that actually work under the pressure of a regulated, mission-critical insurance environment.
 
 Here's what I reach for, and why.
 
-## Why Event-Driven at Lloyd's?
+## Why Event-Driven at London Market?
 
-Insurance platforms at Lloyd's handle complex multi-party workflows: a single policy can involve underwriters, brokers, claims handlers, and compliance teams, often simultaneously. The traditional synchronous request-response model falls apart quickly here. You end up with tight coupling, cascading failures, and no audit trail.
+Insurance platforms at London Market handle complex multi-party workflows: a single policy can involve underwriters, brokers, claims handlers, and compliance teams, often simultaneously. The traditional synchronous request-response model falls apart quickly here. You end up with tight coupling, cascading failures, and no audit trail.
 
 Moving to an event-driven model using AWS SNS and SQS changes that. Each domain event becomes a first-class citizen, independently deliverable, independently consumable, with full decoupling between producers and consumers.
 
@@ -59,7 +59,7 @@ A CloudWatch alarm monitors DLQ message count and pages the team when messages l
 
 ## Pattern 3: The Saga Pattern for Long-Running Workflows
 
-A policy issuance at Lloyd's isn't a single transaction. It spans multiple services: underwriting, compliance checks, document generation, broker notification. Each step can fail independently.
+A policy issuance at London Market isn't a single transaction. It spans multiple services: underwriting, compliance checks, document generation, broker notification. Each step can fail independently.
 
 We use the choreography-based saga with SNS fan-out. Each service publishes an event to SNS when its step completes, and downstream services subscribe via their own SQS queues. Compensating events handle rollback when a step fails.
 

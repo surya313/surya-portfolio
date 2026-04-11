@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: "What I Learned Leading a Team of 7 Engineers at Lloyd's"
+title: "What I Learned Leading a Team of 7 Engineers at London Market"
 description: "Honest lessons from moving from senior individual contributor to technical lead in a high-stakes financial services environment."
 date: 2026-01-20
 tags:
@@ -21,7 +21,7 @@ When I kept trying to be the person who solved the hard technical problems perso
 
 ## Psychological Safety Is a Technical Concern
 
-At Lloyd's, we're working on systems where a bug can affect financial settlements worth millions. The natural instinct is to be extremely conservative, to hesitate before proposing changes and hesitate before reporting problems.
+At London Market, we're working on systems where a bug can affect financial settlements worth millions. The natural instinct is to be extremely conservative, to hesitate before proposing changes and hesitate before reporting problems.
 
 I noticed early on that engineers weren't raising concerns in standups until they were serious. By the time I heard about a potential issue, it was already urgent. Creating an environment where it was safe to say "I'm not sure about this" or "I think there might be a problem here" before it became a crisis was one of the most practically valuable things I did as a lead.
 

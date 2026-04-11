@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "How Amazon Q Developer Reduced Our Post-Deploy Defects by 30%"
-description: "A practical account of integrating AI-assisted code review into a Java microservices team at Lloyd's of London. What worked, what didn't, and the actual numbers."
+description: "A practical account of integrating AI-assisted code review into a Java microservices team at London Market. What worked, what didn't, and the actual numbers."
 date: 2026-02-10
 tags:
   - blog
@@ -12,7 +12,7 @@ tags:
 
 When Amazon Q Developer (formerly CodeWhisperer) matured enough to use for serious code review, I was sceptical. We'd tried AI pair programming tools before and found them useful for boilerplate but unreliable for anything nuanced.
 
-After 8 months of daily use at Lloyd's of London, here's my honest assessment.
+After 8 months of daily use at London Market, here's my honest assessment.
 
 ## The Context
 
@@ -33,7 +33,7 @@ Before Q Developer, our most common post-deploy defects were:
 
 ## What It Doesn't Do Well
 
-It doesn't understand our business domain. A suggestion that's syntactically correct and superficially sensible can still be logically wrong in the context of insurance calculations. For example, it suggested simplifying a premium rounding calculation that looked redundant but was actually required by Lloyd's regulatory compliance rules.
+It doesn't understand our business domain. A suggestion that's syntactically correct and superficially sensible can still be logically wrong in the context of insurance calculations. For example, it suggested simplifying a premium rounding calculation that looked redundant but was actually required by London Market's regulatory compliance rules.
 
 The lesson: AI-assisted review is a first pass, not a final one. Human domain knowledge is still irreplaceable.
 
